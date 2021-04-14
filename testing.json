@@ -1,0 +1,145 @@
+﻿{
+    "blue_points": 0,
+    "last_throw": {
+        "arm_speed": 4.0717726,
+        "total_speed": 6.0721989,
+        "off_axis_spin_deg": -18.914476,
+        "wrist_throw_penalty": 0.60517049,
+        "rot_per_sec": 3.6472368,
+        "pot_speed_from_rot": 2.7499516,
+        "speed_from_arm": 4.1029911,
+        "speed_from_movement": 0.58039951,
+        "speed_from_wrist": 1.3888083,
+        "wrist_align_to_throw_deg": 42.533485,
+        "throw_align_to_movement_deg": 75.0979,
+        "off_axis_penalty": 0.85742784,
+        "throw_move_penalty": 4.079483
+    },
+    "disc": {
+        "position": [ 0.0, 0.0, 0.0 ],
+        "forward": [ 0.0, 0.0, 1.0 ],
+        "left": [ 1.0, 0.0, 0.0 ],
+        "up": [ 0.0, 1.0, 0.0 ],
+        "velocity": [ 0.0, 0.0, 0.0 ],
+        "bounce_count": 0
+    },
+    "sessionid": "9137EC98-C7D5-4AF6-9698-184608DA0926",
+    "orange_team_restart_request": 0,
+    "sessionip": "204.74.230.46",
+    "game_status": "pre_match",
+    "game_clock_display": "10:00.00",
+    "game_clock": 600.0,
+    "match_type": "Echo_Arena_Private",
+    "map_name": "mpl_arena_a",
+    "orange_points": 0,
+    "player": {
+        "vr_left": [ 0.92500007, -0.31200001, 0.21700001 ],
+        "vr_position": [ 0.092000008, 0.077000007, 0.34200001 ],
+        "vr_forward": [ -0.34400001, -0.44600001, 0.82600003 ],
+        "vr_up": [ 0.16100001, 0.83900005, 0.52000004 ]
+    },
+    "private_match": true,
+    "pause": {
+        "paused_state": "unpaused",
+        "unpaused_team": "none",
+        "paused_requested_team": "none",
+        "unpaused_timer": 0.0,
+        "paused_timer": 0.0
+    },
+    "possession": [ -1, -1 ],
+    "tournament_match": false,
+    "blue_team_restart_request": 0,
+    "client_name": "Kano0403",
+    "last_score": {
+        "disc_speed": 0.0,
+        "team": "orange",
+        "goal_type": "[NO GOAL]",
+        "point_amount": 0,
+        "distance_thrown": 0.0,
+        "person_scored": "[INVALID]",
+        "assist_scored": "[INVALID]"
+    },
+    "teams": [
+        {
+            "players": [
+                {
+                    "name": "Kano0403",
+                    "rhand": {
+                        "pos": [ -6.2440004, -7.6490002, -12.703001 ],
+                        "forward": [ -0.81400001, -0.49300003, -0.30700001 ],
+                        "left": [ 0.44800001, -0.87000006, 0.20700002 ],
+                        "up": [ -0.36900002, 0.031000001, 0.92900002 ]
+                    },
+                    "playerid": 0,
+                    "userid": 3507959389247547,
+                    "stats": {
+                        "possession_time": 0.0,
+                        "points": 0,
+                        "saves": 0,
+                        "goals": 0,
+                        "stuns": 0,
+                        "passes": 0,
+                        "catches": 0,
+                        "steals": 0,
+                        "blocks": 0,
+                        "interceptions": 0,
+                        "assists": 0,
+                        "shots_taken": 0
+                    },
+                    "number": 73,
+                    "level": 50,
+                    "ping": 56,
+                    "stunned": false,
+                    "invulnerable": false,
+                    "possession": false,
+                    "holding_left": "none",
+                    "head": {
+                        "position": [ -6.3800001, -7.0890002, -12.535001 ],
+                        "forward": [ -0.76200002, 0.51900005, -0.38700002 ],
+                        "left": [ -0.35700002, 0.16100001, 0.92000002 ],
+                        "up": [ 0.54000002, 0.83900005, 0.063000001 ]
+                    },
+                    "body": {
+                        "position": [ -6.3800001, -7.0890002, -12.535001 ],
+                        "forward": [ -0.77000004, 0.0, -0.63800001 ],
+                        "left": [ -0.63800001, 0.0, 0.77000004 ],
+                        "up": [ 0.0, 1.0, 0.0 ]
+                    },
+                    "holding_right": "none",
+                    "lhand": {
+                        "pos": [ -5.9910002, -7.4850001, -12.771001 ],
+                        "forward": [ 0.044000003, 0.17600001, -0.98300004 ],
+                        "left": [ -0.91100007, -0.39700001, -0.112 ],
+                        "up": [ -0.41100001, 0.90100002, 0.14300001 ]
+                    },
+                    "blocking": false,
+                    "velocity": [ 0.0, 0.0, 0.0 ]
+                }
+            ],
+            "team": "BLUE TEAM",
+            "possession": false,
+            "stats": {
+                "possession_time": 0.0,
+                "points": 0,
+                "goals": 0,
+                "saves": 0,
+                "stuns": 0,
+                "interceptions": 0,
+                "blocks": 0,
+                "passes": 0,
+                "catches": 0,
+                "steals": 0,
+                "assists": 0,
+                "shots_taken": 0
+            }
+        },
+        {
+            "team": "ORANGE TEAM",
+            "possession": false
+        },
+        {
+            "team": "SPECTATORS",
+            "possession": false
+        }
+    ]
+}
