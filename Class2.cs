@@ -1,5 +1,4 @@
-﻿
-namespace EchoAPIVisual2
+﻿namespace EchoAPIVisual2
 {
     public class Data
     {
