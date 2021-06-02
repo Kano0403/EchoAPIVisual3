@@ -14,7 +14,6 @@ namespace EchoAPIVisual2
     {
         private readonly System.Timers.Timer _timer;
         Last_Score[] recentEvents;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -42,7 +41,6 @@ namespace EchoAPIVisual2
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var enabled = _timer.Enabled;
-
             if (enabled)
             {
                 StartStopButton.Content = "Inactive";
@@ -53,15 +51,12 @@ namespace EchoAPIVisual2
                 StartStopButton.Content = "Active";
                 _timer.Enabled = true;
             }
-
-
         }
 
         private void GetResult(string url)
         {
             string result;
             // string fileName = "D:\\VSSs\\EchoAPIVisual3\\jsonMain.json";
-
             try
             {
                 // get
@@ -71,15 +66,6 @@ namespace EchoAPIVisual2
                 {
                     Status.Text = "";
                 });
-
-
-                // set
-                /*this.Dispatcher.Invoke(() =>
-                {
-                    MainLabel.Text = result;
-                }); */
-
-                // File.WriteAllText(fileName, result);
 
                 Data data = JsonSerializer.Deserialize<Data>(result);
 
@@ -137,7 +123,6 @@ namespace EchoAPIVisual2
         private bool isConnected(string url)
         {
             WebClient client = new WebClient();
-
             try
             {
                 client.DownloadString(url);
