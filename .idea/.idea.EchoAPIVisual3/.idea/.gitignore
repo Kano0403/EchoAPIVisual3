@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.EchoAPIVisual3.iml
+# Datasource local storage ignored files
+/../../../../../../:\VSSs\EchoAPIVisual3\.idea\.idea.EchoAPIVisual3\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

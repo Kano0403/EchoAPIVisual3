@@ -151,19 +151,17 @@ namespace EchoAPIVisual2
 
         private bool isConnected(string url)
         {
-            string result;
             WebClient client = new WebClient();
 
             try
             {
-                result = client.DownloadString(url);
+                client.DownloadString(url);
                 return true;
             }
             catch (WebException)
             {
                 return false;
             }
-
         }
 
         private void SetValues(Data data)
@@ -178,22 +176,143 @@ namespace EchoAPIVisual2
                 SessionIpVar.Text = data.sessionip;
 
                 // Blue Team - Names + Pings
-                try
+                try 
                 {
-                    try { BlueP1Name.Text = data.teams[0].players[0].name; } catch (IndexOutOfRangeException) { BlueP1Name.Text = "-- Unknown --"; } catch (NullReferenceException) { BlueP1Name.Text = "-- Unknown --"; }
-                    try { BlueP1Ping.Text = data.teams[0].players[0].ping.ToString(); } catch (IndexOutOfRangeException) { BlueP1Ping.Text = "999"; } catch (NullReferenceException) { BlueP1Ping.Text = "999"; }
-                    try { BlueP2Name.Text = data.teams[0].players[1].name; } catch (IndexOutOfRangeException) { BlueP2Name.Text = "-- Unknown --"; } catch (NullReferenceException) { BlueP2Name.Text = "-- Unknown --"; }
-                    try { BlueP2Ping.Text = data.teams[0].players[1].ping.ToString(); } catch (IndexOutOfRangeException) { BlueP2Ping.Text = "999"; } catch (NullReferenceException) { BlueP2Ping.Text = "999"; }
-                    try { BlueP3Name.Text = data.teams[0].players[2].name; } catch (IndexOutOfRangeException) { BlueP3Name.Text = "-- Unknown --"; } catch (NullReferenceException) { BlueP3Name.Text = "-- Unknown --"; }
-                    try { BlueP3Ping.Text = data.teams[0].players[2].ping.ToString(); } catch (IndexOutOfRangeException) { BlueP3Ping.Text = "999"; } catch (NullReferenceException) { BlueP3Ping.Text = "999"; }
-                    try { BlueP4Name.Text = data.teams[0].players[3].name; } catch (IndexOutOfRangeException) { BlueP4Name.Text = "-- Unknown --"; } catch (NullReferenceException) { BlueP4Name.Text = "-- Unknown --"; }
-                    try { BlueP4Ping.Text = data.teams[0].players[3].ping.ToString(); } catch (IndexOutOfRangeException) { BlueP4Ping.Text = "999"; } catch (NullReferenceException) { BlueP4Ping.Text = "999"; }
-                    try { BlueP5Name.Text = data.teams[0].players[4].name; } catch (IndexOutOfRangeException) { BlueP5Name.Text = "-- Unknown --"; } catch (NullReferenceException) { BlueP5Name.Text = "-- Unknown --"; }
-                    try { BlueP5Ping.Text = data.teams[0].players[4].ping.ToString(); } catch (IndexOutOfRangeException) { BlueP5Ping.Text = "999"; } catch (NullReferenceException) { BlueP5Ping.Text = "999"; }
-                } catch { }
+                    try
+                    {
+                        BlueP1Name.Text = data.teams[0].players[0].name;
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        BlueP1Name.Text = "-- Unknown --";
+                    }
+                    catch (NullReferenceException)
+                    {
+                        BlueP1Name.Text = "-- Unknown --";
+                    }
+
+                    try
+                    {
+                        BlueP1Ping.Text = data.teams[0].players[0].ping.ToString();
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        BlueP1Ping.Text = "999";
+                    }
+                    catch (NullReferenceException)
+                    {
+                        BlueP1Ping.Text = "999";
+                    }
+
+                    try
+                    {
+                        BlueP2Name.Text = data.teams[0].players[1].name;
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        BlueP2Name.Text = "-- Unknown --";
+                    }
+                    catch (NullReferenceException)
+                    {
+                        BlueP2Name.Text = "-- Unknown --";
+                    }
+
+                    try
+                    {
+                        BlueP2Ping.Text = data.teams[0].players[1].ping.ToString();
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        BlueP2Ping.Text = "999";
+                    }
+                    catch (NullReferenceException)
+                    {
+                        BlueP2Ping.Text = "999";
+                    }
+
+                    try
+                    {
+                        BlueP3Name.Text = data.teams[0].players[2].name;
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        BlueP3Name.Text = "-- Unknown --";
+                    }
+                    catch (NullReferenceException)
+                    {
+                        BlueP3Name.Text = "-- Unknown --";
+                    }
+
+                    try
+                    {
+                        BlueP3Ping.Text = data.teams[0].players[2].ping.ToString();
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        BlueP3Ping.Text = "999";
+                    }
+                    catch (NullReferenceException)
+                    {
+                        BlueP3Ping.Text = "999";
+                    }
+
+                    try
+                    {
+                        BlueP4Name.Text = data.teams[0].players[3].name;
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        BlueP4Name.Text = "-- Unknown --";
+                    }
+                    catch (NullReferenceException)
+                    {
+                        BlueP4Name.Text = "-- Unknown --";
+                    }
+
+                    try
+                    {
+                        BlueP4Ping.Text = data.teams[0].players[3].ping.ToString();
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        BlueP4Ping.Text = "999";
+                    }
+                    catch (NullReferenceException)
+                    {
+                        BlueP4Ping.Text = "999";
+                    }
+
+                    try
+                    {
+                        BlueP5Name.Text = data.teams[0].players[4].name;
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        BlueP5Name.Text = "-- Unknown --";
+                    }
+                    catch (NullReferenceException)
+                    {
+                        BlueP5Name.Text = "-- Unknown --";
+                    }
+
+                    try
+                    {
+                        BlueP5Ping.Text = data.teams[0].players[4].ping.ToString();
+                    }
+                    catch (IndexOutOfRangeException)
+                    {
+                        BlueP5Ping.Text = "999";
+                    }
+                    catch (NullReferenceException)
+                    {
+                        BlueP5Ping.Text = "999";
+                    }
+                } catch {
+                    // ignored
+                }
 
                 // Orange Team - Names + Pings
-                try
+                try 
                 {
                     try { OrangeP1Name.Text = data.teams[1].players[0].name; } catch (IndexOutOfRangeException) { OrangeP1Name.Text = "-- Unknown --"; } catch (NullReferenceException) { OrangeP1Name.Text = "-- Unknown --"; }
                     try { OrangeP1Ping.Text = data.teams[1].players[0].ping.ToString(); } catch (IndexOutOfRangeException) { OrangeP1Ping.Text = "999"; } catch (NullReferenceException) { OrangeP1Ping.Text = "999"; }
@@ -205,23 +324,20 @@ namespace EchoAPIVisual2
                     try { OrangeP4Ping.Text = data.teams[1].players[3].ping.ToString(); } catch (IndexOutOfRangeException) { OrangeP4Ping.Text = "999"; } catch (NullReferenceException) { OrangeP4Ping.Text = "999"; }
                     try { OrangeP5Name.Text = data.teams[1].players[4].name; } catch (IndexOutOfRangeException) { OrangeP5Name.Text = "-- Unknown --"; } catch (NullReferenceException) { OrangeP5Name.Text = "-- Unknown --"; }
                     try { OrangeP5Ping.Text = data.teams[1].players[4].ping.ToString(); } catch (IndexOutOfRangeException) { OrangeP5Ping.Text = "999"; } catch (NullReferenceException) { OrangeP5Ping.Text = "999"; }
-                } catch { }
+                } catch {
+                    // ignored
+                }
 
                 // Score
                 try { BlueScore.Text = data.blue_points.ToString(); } catch (NullReferenceException) { BlueScore.Text = "n0"; }
                 try { OrangeScore.Text = data.orange_points.ToString(); } catch (NullReferenceException) { OrangeScore.Text = "n0"; }
 
                 // RecentEvents
-                foreach (Last_Score each in recentEvents)
+                if (recentEvents.Any(each => data.last_score != each))
                 {
-                    if (data.last_score != each)
-                    {
-                        recentEvents.Append(data.last_score);
-                        LatestScoresVar.Text += $"{data.last_score.person_scored} scored {data.last_score.point_amount} a {data.last_score.goal_type} for {data.last_score.point_amount} points with and assist from {data.last_score.assist_scored}!!\n";
-                        break;
-                    }
+                    recentEvents.Append(data.last_score);
+                    LatestScoresVar.Text += $"{data.last_score.person_scored} scored {data.last_score.point_amount} a {data.last_score.goal_type} for {data.last_score.point_amount} points with and assist from {data.last_score.assist_scored}!!\n";
                 }
-                
             });
         }
     }
