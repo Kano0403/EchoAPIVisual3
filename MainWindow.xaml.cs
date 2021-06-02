@@ -68,9 +68,8 @@ namespace EchoAPIVisual2
                 });
 
                 Data data = JsonSerializer.Deserialize<Data>(result);
-
+                
                 Console.WriteLine(data.client_name);
-
                 SetValues(data);
             }
             catch (WebException)
