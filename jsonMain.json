@@ -1,1 +1,42 @@
-{"last_throw":{"arm_speed":6.076448,"total_speed":5.8310394,"off_axis_spin_deg":-10.434886,"wrist_throw_penalty":0.64197338,"rot_per_sec":5.1546001,"pot_speed_from_rot":3.8864768,"speed_from_arm":6.1636109,"speed_from_movement":-1.7809062,"speed_from_wrist":1.4483347,"wrist_align_to_throw_deg":43.872726,"throw_align_to_movement_deg":130.06294,"off_axis_penalty":1.7018034,"throw_move_penalty":12.511213},"sessionid":"6389C22D-3902-427D-85AD-F991966CB806","sessionip":"216.104.43.154","match_type":"Social_2.0","teams":[{"team":"BLUE TEAM"},{"team":"ORANGE TEAM"},{"team":"SPECTATORS"}],"map_name":"mpl_lobby_b2","player":{"vr_left":[0.99700004,0.076000005,-0.032000002],"vr_position":[-0.0040000002,0.0020000001,-0.0020000001],"vr_forward":[0.033,-0.0040000002,0.99900007],"vr_up":[-0.076000005,0.99700004,0.0060000001]},"private_match":false,"pause":{"paused_state":"none","unpaused_team":"none","paused_requested_team":"none","unpaused_timer":0.0,"paused_timer":0.0},"tournament_match":false,"client_name":"Kano0403"}
+{
+    "last_throw": {
+        "arm_speed": 6.076448,
+        "total_speed": 5.8310394,
+        "off_axis_spin_deg": -10.434886,
+        "wrist_throw_penalty": 0.64197338,
+        "rot_per_sec": 5.1546001,
+        "pot_speed_from_rot": 3.8864768,
+        "speed_from_arm": 6.1636109,
+        "speed_from_movement": -1.7809062,
+        "speed_from_wrist": 1.4483347,
+        "wrist_align_to_throw_deg": 43.872726,
+        "throw_align_to_movement_deg": 130.06294,
+        "off_axis_penalty": 1.7018034,
+        "throw_move_penalty": 12.511213
+    },
+    "sessionid": "6389C22D-3902-427D-85AD-F991966CB806",
+    "sessionip": "216.104.43.154",
+    "match_type": "Social_2.0",
+    "teams": [
+        { "team": "BLUE TEAM" },
+        { "team": "ORANGE TEAM" },
+        { "team": "SPECTATORS" }
+    ],
+    "map_name": "mpl_lobby_b2",
+    "player": {
+        "vr_left": [ 0.99700004, 0.076000005, -0.032000002 ],
+        "vr_position": [ -0.0040000002, 0.0020000001, -0.0020000001 ],
+        "vr_forward": [ 0.033, -0.0040000002, 0.99900007 ],
+        "vr_up": [ -0.076000005, 0.99700004, 0.0060000001 ]
+    },
+    "private_match": false,
+    "pause": {
+        "paused_state": "none",
+        "unpaused_team": "none",
+        "paused_requested_team": "none",
+        "unpaused_timer": 0.0,
+        "paused_timer": 0.0
+    },
+    "tournament_match": false,
+    "client_name": "Kano0403"
+}

@@ -8,71 +8,68 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button x:Name="StartStopButton" Content="Start" HorizontalAlignment="Left" Margin="707,389,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        
-        <TextBlock x:Name="SessionIdLabel"  HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Session ID:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="SessionIdVar"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,10,0,0" TextWrapping="Wrap" Text="-- Unknown / Not Connected --" Height="15" Width="400"/>
-        
-        <TextBlock x:Name="SessionIpLabel"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,0,0" TextWrapping="Wrap" Text="Session IP:"/>
-        <TextBlock x:Name="SessionIpVar"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,30,0,0" TextWrapping="Wrap" Width="225" Text="-- Unknown / Not Connected --"/>
-        
-        <TextBlock x:Name="DeviceIpLabel"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,51,0,0" TextWrapping="Wrap" Width="55" Height="16" Text=" Device IP:"/>
-        <TextBox x:Name="DeviceIpInputVar"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,51,0,0" TextWrapping="Wrap" Width="100" Height="16" Text="127.0.0.1"/>
 
-        <TextBlock x:Name="LastestScoreLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,229,0,0" TextWrapping="Wrap" Text="Latest Scores"/>
+        <TextBlock x:Name="SessionIdLabel"    HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Session ID:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="SessionIdVar"      HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,10,0,0" TextWrapping="Wrap" Text="-- Unknown / Not Connected --" Height="15" Width="400"/>
+
+        <TextBlock x:Name="SessionIpLabel"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,0,0" TextWrapping="Wrap" Text="Session IP:"/>
+        <TextBlock x:Name="SessionIpVar"      HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,30,0,0" TextWrapping="Wrap" Width="225" Text="-- Unknown / Not Connected --"/>
+
+        <TextBlock x:Name="DeviceIpLabel"     HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,51,0,0" TextWrapping="Wrap" Width="55" Height="16" Text=" Device IP:"/>
+        <TextBox x:Name="DeviceIpInputVar"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,51,0,0" TextWrapping="Wrap" Width="100" Height="16" Text="127.0.0.1"/>
+
+        <TextBlock x:Name="LastestScoreLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,229,0,0" TextWrapping="Wrap" FontWeight="Bold" Text="Latest Scores"/>
         <TextBlock x:Name="LatestScoresVar"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,250,0,0" TextWrapping="Wrap" Height="159" Width="650" Text=""/>
 
-        <TextBlock x:Name="OrangeTeamLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,75,80,0" TextWrapping="Wrap" Text="Orange" Height="21" Width="65" FontSize="16" FontWeight="Bold" TextAlignment="Right"/>
-        <TextBlock x:Name="BlueTeamLabel"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,75,0,0" TextWrapping="Wrap" Text="BLUE" Height="21" Width="40" FontSize="16" FontWeight="Bold"/>
-        
-        <TextBlock x:Name="BlueScore"       HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,79,0,0" TextWrapping="Wrap" Text="0"/>
-        <TextBlock x:Name="OrangeScore"     HorizontalAlignment="Left" VerticalAlignment="Top" Margin="636,79,0,0" TextWrapping="Wrap" Text="0" TextAlignment="Right"/>
-        
-        <TextBlock x:Name="Status"          HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,393,0,0" TextWrapping="Wrap" Text=""/>
-        
+        <TextBlock x:Name="BlueTeamLabel"     HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,75,0,0" TextWrapping="Wrap" Text="BLUE" Height="21" Width="40" FontSize="16" FontWeight="Bold"/>
+        <TextBlock x:Name="OrangeTeamLabel"   HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,75,80,0" TextWrapping="Wrap" Text="Orange" Height="21" Width="60" FontSize="16" FontWeight="Bold" TextAlignment="Right"/>
+
+        <TextBlock x:Name="BlueScore"         HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,79,0,0" TextWrapping="Wrap" Text="0"/>
+        <TextBlock x:Name="OrangeScore"       HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,79,145,0" TextWrapping="Wrap" Text="0" TextAlignment="Right"/>
+
+        <TextBlock x:Name="Status"            HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,393,0,0" TextWrapping="Wrap" Text=""/>
         <Grid x:Name="BlueInfo"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,101,0,0" Height="118" Width="200">
-            
+
             <TextBlock x:Name="BlueP1Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Width="120" TextWrapping="Wrap" Text="-- Unknown --"/>
             <TextBlock x:Name="BlueP2Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,31,0,0" Width="120" TextWrapping="Wrap" Text="-- Unknown --"/>
             <TextBlock x:Name="BlueP3Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,52,0,0" Width="120" TextWrapping="Wrap" Text="-- Unknown --"/>
             <TextBlock x:Name="BlueP4Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,73,0,0" Width="120" TextWrapping="Wrap" Text="-- Unknown --"/>
             <TextBlock x:Name="BlueP5Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,94,0,0" Width="120" TextWrapping="Wrap" Text="-- Unknown --"/>
-            
+
             <TextBlock x:Name="BlueP1Ping" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="135,10,0,0" Width="25" TextWrapping="Wrap" Text="999"/>
             <TextBlock x:Name="BlueP2Ping" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="135,31,0,0" Width="25" TextWrapping="Wrap" Text="999"/>
             <TextBlock x:Name="BlueP3Ping" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="135,52,0,0" Width="25" TextWrapping="Wrap" Text="999"/>
             <TextBlock x:Name="BlueP4Ping" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="135,73,0,0" Width="25" TextWrapping="Wrap" Text="999"/>
             <TextBlock x:Name="BlueP5Ping" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="135,94,0,0" Width="25" TextWrapping="Wrap" Text="999"/>
-            
+
             <Button x:Name="BlueP1More" Content="More" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,10,0,0" Width="25" Height="16" FontSize="9"/>
             <Button x:Name="BlueP2More" Content="More" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,31,0,0" Width="25" Height="16" FontSize="9"/>
             <Button x:Name="BlueP3More" Content="More" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,52,0,0" Width="25" Height="16" FontSize="9"/>
             <Button x:Name="BlueP4More" Content="More" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,73,0,0" Width="25" Height="16" FontSize="9"/>
             <Button x:Name="BlueP5More" Content="More" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,94,0,0" Width="25" Height="16" FontSize="9"/>
-      
+
         </Grid>
         <Grid x:Name="OrangeInfo" HorizontalAlignment="Right" Height="118" Margin="0,101,70,0" VerticalAlignment="Top" Width="200">
-            
+
             <TextBlock x:Name="OrangeP1Name" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Width="100" TextWrapping="Wrap" Text="-- Unknown --" TextAlignment="Right"/>
             <TextBlock x:Name="OrangeP2Name" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,31,10,0" Width="100" TextWrapping="Wrap" Text="-- Unknown --" TextAlignment="Right"/>
             <TextBlock x:Name="OrangeP3Name" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,52,10,0" Width="100" TextWrapping="Wrap" Text="-- Unknown --" TextAlignment="Right"/>
             <TextBlock x:Name="OrangeP4Name" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,73,10,0" Width="100" TextWrapping="Wrap" Text="-- Unknown --" TextAlignment="Right"/>
             <TextBlock x:Name="OrangeP5Name" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,94,10,0" Width="100" TextWrapping="Wrap" Text="-- Unknown --" TextAlignment="Right"/>
-            
+
             <TextBlock x:Name="OrangeP1Ping" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,135,0" Width="25" TextWrapping="Wrap" Text="999" TextAlignment="Right"/>
             <TextBlock x:Name="OrangeP2Ping" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,31,135,0" Width="25" TextWrapping="Wrap" Text="999" TextAlignment="Right"/>
             <TextBlock x:Name="OrangeP3Ping" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,52,135,0" Width="25" TextWrapping="Wrap" Text="999" TextAlignment="Right"/>
             <TextBlock x:Name="OrangeP4Ping" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,73,135,0" Width="25" TextWrapping="Wrap" Text="999" TextAlignment="Right"/>
             <TextBlock x:Name="OrangeP5Ping" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,94,135,0" Width="25" TextWrapping="Wrap" Text="999" TextAlignment="Right"/>
-            
+
             <Button    x:Name="OrangeP1More" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,165,0" Width="25" Height="16" Content="More" FontSize="9"/>
             <Button    x:Name="OrangeP2More" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,32,165,0" Width="25" Height="16" Content="More" FontSize="9"/>
             <Button    x:Name="OrangeP3More" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,52,165,0" Width="25" Height="16" Content="More" FontSize="9"/>
             <Button    x:Name="OrangeP4More" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,73,165,0" Width="25" Height="16" Content="More" FontSize="9"/>
             <Button    x:Name="OrangeP5More" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,94,165,0" Width="25" Height="16" Content="More" FontSize="9"/>
-            
+
         </Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="10,250,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="159" Width="650"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,229,0,0" TextWrapping="Wrap" Text="Latest Scores" VerticalAlignment="Top"/>
     </Grid>
 </Window>
 
