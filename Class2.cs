@@ -1,4 +1,4 @@
-﻿namespace EchoAPIVisual2
+﻿namespace EchoAPIVisual3
 {
     public class Data
     {
@@ -114,4 +114,3 @@
         public float[] up { get; set; }
     }
 }
-

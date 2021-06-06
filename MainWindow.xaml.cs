@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using System.Windows;
 using System.Net;
-using System.Timers;
 using System.Text.Json;
+using System.Timers;
+using System.Windows;
 
-namespace EchoAPIVisual2
+namespace EchoAPIVisual3
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -13,7 +16,7 @@ namespace EchoAPIVisual2
     public partial class MainWindow : Window
     {
         private readonly System.Timers.Timer _timer;
-        Last_Score[] recentEvents;
+        private IEnumerable<Last_Score> _recentEvents;
         public MainWindow()
         {
             InitializeComponent();
@@ -55,13 +58,12 @@ namespace EchoAPIVisual2
 
         private void GetResult(string url)
         {
-            string result;
             // string fileName = "D:\\VSSs\\EchoAPIVisual3\\jsonMain.json";
             try
             {
                 // get
                 WebClient client = new WebClient();
-                result = client.DownloadString(url);
+                string result = client.DownloadString(url);
                 this.Dispatcher.Invoke(() =>
                 {
                     Status.Text = "";
@@ -83,7 +85,7 @@ namespace EchoAPIVisual2
             }
         }
 
-        /* 
+        /*
         private string GetResult(string url, string txtPath, string[] append)
         {
             string result;
@@ -119,7 +121,7 @@ namespace EchoAPIVisual2
         } 
         */
 
-        private bool isConnected(string url)
+        private bool IsConnected(string url)
         {
             WebClient client = new WebClient();
             try
@@ -138,7 +140,13 @@ namespace EchoAPIVisual2
             this.Dispatcher.Invoke(() =>
             {
                 // Last_Score Setup
-                recentEvents.Append(data.last_score);
+                try 
+                {
+                    _recentEvents = _recentEvents.Append(data.last_score);
+                } catch (Exception ex) 
+                {
+                    Console.WriteLine(ex);
+                }
 
                 // SessionInfo
                 SessionIdVar.Text = data.sessionid;
@@ -147,135 +155,17 @@ namespace EchoAPIVisual2
                 // Blue Team - Names + Pings
                 try 
                 {
-                    try
-                    {
-                        BlueP1Name.Text = data.teams[0].players[0].name;
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
-                        BlueP1Name.Text = "-- Unknown --";
-                    }
-                    catch (NullReferenceException)
-                    {
-                        BlueP1Name.Text = "-- Unknown --";
-                    }
-
-                    try
-                    {
-                        BlueP1Ping.Text = data.teams[0].players[0].ping.ToString();
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
-                        BlueP1Ping.Text = "999";
-                    }
-                    catch (NullReferenceException)
-                    {
-                        BlueP1Ping.Text = "999";
-                    }
-
-                    try
-                    {
-                        BlueP2Name.Text = data.teams[0].players[1].name;
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
-                        BlueP2Name.Text = "-- Unknown --";
-                    }
-                    catch (NullReferenceException)
-                    {
-                        BlueP2Name.Text = "-- Unknown --";
-                    }
-
-                    try
-                    {
-                        BlueP2Ping.Text = data.teams[0].players[1].ping.ToString();
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
-                        BlueP2Ping.Text = "999";
-                    }
-                    catch (NullReferenceException)
-                    {
-                        BlueP2Ping.Text = "999";
-                    }
-
-                    try
-                    {
-                        BlueP3Name.Text = data.teams[0].players[2].name;
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
-                        BlueP3Name.Text = "-- Unknown --";
-                    }
-                    catch (NullReferenceException)
-                    {
-                        BlueP3Name.Text = "-- Unknown --";
-                    }
-
-                    try
-                    {
-                        BlueP3Ping.Text = data.teams[0].players[2].ping.ToString();
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
-                        BlueP3Ping.Text = "999";
-                    }
-                    catch (NullReferenceException)
-                    {
-                        BlueP3Ping.Text = "999";
-                    }
-
-                    try
-                    {
-                        BlueP4Name.Text = data.teams[0].players[3].name;
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
-                        BlueP4Name.Text = "-- Unknown --";
-                    }
-                    catch (NullReferenceException)
-                    {
-                        BlueP4Name.Text = "-- Unknown --";
-                    }
-
-                    try
-                    {
-                        BlueP4Ping.Text = data.teams[0].players[3].ping.ToString();
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
-                        BlueP4Ping.Text = "999";
-                    }
-                    catch (NullReferenceException)
-                    {
-                        BlueP4Ping.Text = "999";
-                    }
-
-                    try
-                    {
-                        BlueP5Name.Text = data.teams[0].players[4].name;
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
-                        BlueP5Name.Text = "-- Unknown --";
-                    }
-                    catch (NullReferenceException)
-                    {
-                        BlueP5Name.Text = "-- Unknown --";
-                    }
-
-                    try
-                    {
-                        BlueP5Ping.Text = data.teams[0].players[4].ping.ToString();
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
-                        BlueP5Ping.Text = "999";
-                    }
-                    catch (NullReferenceException)
-                    {
-                        BlueP5Ping.Text = "999";
-                    }
+                    try { BlueP1Name.Text = data.teams[0].players[0].name; } catch (IndexOutOfRangeException) { BlueP1Name.Text = "-- Unknown --"; }catch (NullReferenceException) { BlueP1Name.Text = "-- Unknown --"; }
+                    try { BlueP1Ping.Text = data.teams[0].players[0].ping.ToString(); } catch (IndexOutOfRangeException) { BlueP1Ping.Text = "999"; } catch (NullReferenceException) { BlueP1Ping.Text = "999"; }
+                    try { BlueP2Name.Text = data.teams[0].players[1].name; } catch (IndexOutOfRangeException) { BlueP2Name.Text = "-- Unknown --"; } catch (NullReferenceException) { BlueP2Name.Text = "-- Unknown --"; }
+                    try { BlueP2Ping.Text = data.teams[0].players[1].ping.ToString(); } catch (IndexOutOfRangeException) { BlueP2Ping.Text = "999"; } catch (NullReferenceException) { BlueP2Ping.Text = "999"; }
+                    try { BlueP3Name.Text = data.teams[0].players[2].name; } catch (IndexOutOfRangeException) { BlueP3Name.Text = "-- Unknown --"; } catch (NullReferenceException) { BlueP3Name.Text = "-- Unknown --"; }
+                    try { BlueP3Ping.Text = data.teams[0].players[2].ping.ToString(); } catch (IndexOutOfRangeException) { BlueP3Ping.Text = "999"; } catch (NullReferenceException) { BlueP3Ping.Text = "999"; }
+                    try { BlueP4Name.Text = data.teams[0].players[3].name; } catch (IndexOutOfRangeException) { BlueP4Name.Text = "-- Unknown --"; } catch (NullReferenceException) { BlueP4Name.Text = "-- Unknown --"; }
+                    try { BlueP4Ping.Text = data.teams[0].players[3].ping.ToString(); } catch (IndexOutOfRangeException) { BlueP4Ping.Text = "999"; } catch (NullReferenceException) { BlueP4Ping.Text = "999"; }
+                    try { BlueP5Name.Text = data.teams[0].players[4].name; } catch (IndexOutOfRangeException) { BlueP5Name.Text = "-- Unknown --"; } catch (NullReferenceException) { BlueP5Name.Text = "-- Unknown --"; }
+                    try { BlueP5Ping.Text = data.teams[0].players[4].ping.ToString(); } catch (IndexOutOfRangeException) { BlueP5Ping.Text = "999"; } catch (NullReferenceException) { BlueP5Ping.Text = "999"; }
+                    
                 } catch {
                     // ignored
                 }
@@ -298,13 +188,32 @@ namespace EchoAPIVisual2
                 }
 
                 // Score
-                try { BlueScore.Text = data.blue_points.ToString(); } catch (NullReferenceException) { BlueScore.Text = "n0"; }
-                try { OrangeScore.Text = data.orange_points.ToString(); } catch (NullReferenceException) { OrangeScore.Text = "n0"; }
-
-                // RecentEvents
-                if (recentEvents.Any(each => data.last_score != each))
+                try 
                 {
-                    recentEvents.Append(data.last_score);
+                    try
+                    {
+                        BlueScore.Text = data.blue_points.ToString();
+                    }
+                    catch (NullReferenceException)
+                    {
+                        BlueScore.Text = "n0";
+                    }
+
+                    try
+                    {
+                        OrangeScore.Text = data.orange_points.ToString();
+                    }
+                    catch (NullReferenceException)
+                    {
+                        OrangeScore.Text = "n0";
+                    }
+                } catch {
+                    // ignored
+                }
+                
+                // RecentEvents
+                if (_recentEvents.Any(each => data.last_score != each))
+                {
                     LatestScoresVar.Text += $"{data.last_score.person_scored} scored {data.last_score.point_amount} a {data.last_score.goal_type} for {data.last_score.point_amount} points with and assist from {data.last_score.assist_scored}!!\n";
                 }
             });
