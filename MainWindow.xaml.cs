@@ -17,6 +17,8 @@ namespace EchoAPIVisual3
     {
         private readonly System.Timers.Timer _timer;
         private IEnumerable<Last_Score> _recentEvents;
+        private Data data = null;
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -69,7 +71,7 @@ namespace EchoAPIVisual3
                     Status.Text = "";
                 });
 
-                Data data = JsonSerializer.Deserialize<Data>(result);
+                data = JsonSerializer.Deserialize<Data>(result);
                 
                 Console.WriteLine(data.client_name);
                 SetValues(data);
@@ -219,11 +221,456 @@ namespace EchoAPIVisual3
             });
         }
 
-        private void ExpandedPlayerStats(object sender, RoutedEventArgs e)
+        private void B1ExpandedPlayerStats(object sender, RoutedEventArgs e) 
         {
             ExpandedStats expandedStats = new ExpandedStats();
             expandedStats.Show();
 
+            try
+            {
+                // BluePlayer1Name
+                expandedStats.PlayerName.Text = data.teams[0].players[0].name;
+                // Blue1Player1Points
+                expandedStats.PlayerPoints.Text = data.teams[0].players[0].stats.points.ToString();
+                // BluePlayer1Assists
+                expandedStats.PlayerAssists.Text = data.teams[0].players[0].stats.assists.ToString();
+                // BluePlayer1Shots
+                expandedStats.PlayerShots.Text = data.teams[0].players[0].stats.shots_taken.ToString();
+                // BluePlayer1Saves
+                expandedStats.PlayerSaves.Text = data.teams[0].players[0].stats.saves.ToString();
+                // BluePlayer1Steals
+                expandedStats.PlayerSteals.Text = data.teams[0].players[0].stats.steals.ToString();
+                // BluePlayer1Stuns
+                expandedStats.PlayerStuns.Text = data.teams[0].players[0].stats.stuns.ToString();
+            }
+            catch (NullReferenceException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+            catch (IndexOutOfRangeException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+        }
+        private void B2ExpandedPlayerStats(object sender, RoutedEventArgs e) 
+        {
+            ExpandedStats expandedStats = new ExpandedStats();
+            expandedStats.Show();
+            
+            try
+            {
+                // BluePlayer1Name
+                expandedStats.PlayerName.Text = data.teams[0].players[1].name;
+                // Blue1Player1Points
+                expandedStats.PlayerPoints.Text = data.teams[0].players[1].stats.points.ToString();
+                // BluePlayer1Assists
+                expandedStats.PlayerAssists.Text = data.teams[0].players[1].stats.assists.ToString();
+                // BluePlayer1Shots
+                expandedStats.PlayerShots.Text = data.teams[0].players[1].stats.shots_taken.ToString();
+                // BluePlayer1Saves
+                expandedStats.PlayerSaves.Text = data.teams[0].players[1].stats.saves.ToString();
+                // BluePlayer1Steals
+                expandedStats.PlayerSteals.Text = data.teams[0].players[1].stats.steals.ToString();
+                // BluePlayer1Stuns
+                expandedStats.PlayerStuns.Text = data.teams[0].players[1].stats.stuns.ToString();
+            }
+            catch (NullReferenceException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+            catch (IndexOutOfRangeException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+        }
+        private void B3ExpandedPlayerStats(object sender, RoutedEventArgs e) 
+        {
+            ExpandedStats expandedStats = new ExpandedStats();
+            expandedStats.Show();
+            
+            try
+            {
+                // BluePlayer1Name
+                expandedStats.PlayerName.Text = data.teams[0].players[2].name;
+                // Blue1Player1Points
+                expandedStats.PlayerPoints.Text = data.teams[0].players[2].stats.points.ToString();
+                // BluePlayer1Assists
+                expandedStats.PlayerAssists.Text = data.teams[0].players[2].stats.assists.ToString();
+                // BluePlayer1Shots
+                expandedStats.PlayerShots.Text = data.teams[0].players[2].stats.shots_taken.ToString();
+                // BluePlayer1Saves
+                expandedStats.PlayerSaves.Text = data.teams[0].players[2].stats.saves.ToString();
+                // BluePlayer1Steals
+                expandedStats.PlayerSteals.Text = data.teams[0].players[2].stats.steals.ToString();
+                // BluePlayer1Stuns
+                expandedStats.PlayerStuns.Text = data.teams[0].players[2].stats.stuns.ToString();
+            }
+            catch (NullReferenceException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+            catch (IndexOutOfRangeException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+        }
+        private void B4ExpandedPlayerStats(object sender, RoutedEventArgs e) 
+        {
+            ExpandedStats expandedStats = new ExpandedStats();
+            expandedStats.Show();
+            
+            try
+            {
+                // BluePlayer1Name
+                expandedStats.PlayerName.Text = data.teams[0].players[3].name;
+                // Blue1Player1Points
+                expandedStats.PlayerPoints.Text = data.teams[0].players[3].stats.points.ToString();
+                // BluePlayer1Assists
+                expandedStats.PlayerAssists.Text = data.teams[0].players[3].stats.assists.ToString();
+                // BluePlayer1Shots
+                expandedStats.PlayerShots.Text = data.teams[0].players[3].stats.shots_taken.ToString();
+                // BluePlayer1Saves
+                expandedStats.PlayerSaves.Text = data.teams[0].players[3].stats.saves.ToString();
+                // BluePlayer1Steals
+                expandedStats.PlayerSteals.Text = data.teams[0].players[3].stats.steals.ToString();
+                // BluePlayer1Stuns
+                expandedStats.PlayerStuns.Text = data.teams[0].players[3].stats.stuns.ToString();
+            }
+            catch (NullReferenceException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+            catch (IndexOutOfRangeException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+        }
+        private void B5ExpandedPlayerStats(object sender, RoutedEventArgs e) 
+        {
+            ExpandedStats expandedStats = new ExpandedStats();
+            expandedStats.Show();
+            
+            try
+            {
+                // BluePlayer1Name
+                expandedStats.PlayerName.Text = data.teams[0].players[4].name;
+                // Blue1Player1Points
+                expandedStats.PlayerPoints.Text = data.teams[0].players[4].stats.points.ToString();
+                // BluePlayer1Assists
+                expandedStats.PlayerAssists.Text = data.teams[0].players[4].stats.assists.ToString();
+                // BluePlayer1Shots
+                expandedStats.PlayerShots.Text = data.teams[0].players[4].stats.shots_taken.ToString();
+                // BluePlayer1Saves
+                expandedStats.PlayerSaves.Text = data.teams[0].players[4].stats.saves.ToString();
+                // BluePlayer1Steals
+                expandedStats.PlayerSteals.Text = data.teams[0].players[4].stats.steals.ToString();
+                // BluePlayer1Stuns
+                expandedStats.PlayerStuns.Text = data.teams[0].players[4].stats.stuns.ToString();
+            }
+            catch (NullReferenceException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+            catch (IndexOutOfRangeException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+        }
+        
+        private void O1ExpandedPlayerStats(object sender, RoutedEventArgs e) 
+        {
+            ExpandedStats expandedStats = new ExpandedStats();
+            expandedStats.Show();
+
+            try
+            {
+                // OrangePlayer1Name
+                expandedStats.PlayerName.Text = data.teams[1].players[0].name;
+                // Orange1Player1Points
+                expandedStats.PlayerPoints.Text = data.teams[1].players[0].stats.points.ToString();
+                // OrangePlayer1Assists
+                expandedStats.PlayerAssists.Text = data.teams[1].players[0].stats.assists.ToString();
+                // OrangePlayer1Shots
+                expandedStats.PlayerShots.Text = data.teams[1].players[0].stats.shots_taken.ToString();
+                // OrangePlayer1Saves
+                expandedStats.PlayerSaves.Text = data.teams[1].players[0].stats.saves.ToString();
+                // OrangePlayer1Steals
+                expandedStats.PlayerSteals.Text = data.teams[1].players[0].stats.steals.ToString();
+                // OrangePlayer1Stuns
+                expandedStats.PlayerStuns.Text = data.teams[1].players[0].stats.stuns.ToString();
+            }
+            catch (NullReferenceException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+            catch (IndexOutOfRangeException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+        }
+        private void O2ExpandedPlayerStats(object sender, RoutedEventArgs e) 
+        {
+            ExpandedStats expandedStats = new ExpandedStats();
+            expandedStats.Show();
+
+            try
+            {
+                // OrangePlayer1Name
+                expandedStats.PlayerName.Text = data.teams[1].players[1].name;
+                // Orange1Player1Points
+                expandedStats.PlayerPoints.Text = data.teams[1].players[1].stats.points.ToString();
+                // OrangePlayer1Assists
+                expandedStats.PlayerAssists.Text = data.teams[1].players[1].stats.assists.ToString();
+                // OrangePlayer1Shots
+                expandedStats.PlayerShots.Text = data.teams[1].players[1].stats.shots_taken.ToString();
+                // OrangePlayer1Saves
+                expandedStats.PlayerSaves.Text = data.teams[1].players[1].stats.saves.ToString();
+                // OrangePlayer1Steals
+                expandedStats.PlayerSteals.Text = data.teams[1].players[1].stats.steals.ToString();
+                // OrangePlayer1Stuns
+                expandedStats.PlayerStuns.Text = data.teams[1].players[1].stats.stuns.ToString();
+            }
+            catch (NullReferenceException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+            catch (IndexOutOfRangeException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+        }
+        private void O3ExpandedPlayerStats(object sender, RoutedEventArgs e) 
+        {
+            ExpandedStats expandedStats = new ExpandedStats();
+            expandedStats.Show();
+
+            try
+            {
+                // OrangePlayer1Name
+                expandedStats.PlayerName.Text = data.teams[1].players[2].name;
+                // Orange1Player1Points
+                expandedStats.PlayerPoints.Text = data.teams[1].players[2].stats.points.ToString();
+                // OrangePlayer1Assists
+                expandedStats.PlayerAssists.Text = data.teams[1].players[2].stats.assists.ToString();
+                // OrangePlayer1Shots
+                expandedStats.PlayerShots.Text = data.teams[1].players[2].stats.shots_taken.ToString();
+                // OrangePlayer1Saves
+                expandedStats.PlayerSaves.Text = data.teams[1].players[2].stats.saves.ToString();
+                // OrangePlayer1Steals
+                expandedStats.PlayerSteals.Text = data.teams[1].players[2].stats.steals.ToString();
+                // OrangePlayer1Stuns
+                expandedStats.PlayerStuns.Text = data.teams[1].players[2].stats.stuns.ToString();
+            }
+            catch (NullReferenceException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+            catch (IndexOutOfRangeException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+        }
+        private void O4ExpandedPlayerStats(object sender, RoutedEventArgs e) 
+        {
+            ExpandedStats expandedStats = new ExpandedStats();
+            expandedStats.Show();
+
+            try
+            {
+                // OrangePlayer1Name
+                expandedStats.PlayerName.Text = data.teams[1].players[3].name;
+                // Orange1Player1Points
+                expandedStats.PlayerPoints.Text = data.teams[1].players[3].stats.points.ToString();
+                // OrangePlayer1Assists
+                expandedStats.PlayerAssists.Text = data.teams[1].players[3].stats.assists.ToString();
+                // OrangePlayer1Shots
+                expandedStats.PlayerShots.Text = data.teams[1].players[3].stats.shots_taken.ToString();
+                // OrangePlayer1Saves
+                expandedStats.PlayerSaves.Text = data.teams[1].players[3].stats.saves.ToString();
+                // OrangePlayer1Steals
+                expandedStats.PlayerSteals.Text = data.teams[1].players[3].stats.steals.ToString();
+                // OrangePlayer1Stuns
+                expandedStats.PlayerStuns.Text = data.teams[1].players[3].stats.stuns.ToString();
+            }
+            catch (NullReferenceException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+            catch (IndexOutOfRangeException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+        }
+        private void O5ExpandedPlayerStats(object sender, RoutedEventArgs e) 
+        {
+            ExpandedStats expandedStats = new ExpandedStats();
+            expandedStats.Show();
+
+            try
+            {
+                // OrangePlayer1Name
+                expandedStats.PlayerName.Text = data.teams[1].players[4].name;
+                // Orange1Player1Points
+                expandedStats.PlayerPoints.Text = data.teams[1].players[4].stats.points.ToString();
+                // OrangePlayer1Assists
+                expandedStats.PlayerAssists.Text = data.teams[1].players[4].stats.assists.ToString();
+                // OrangePlayer1Shots
+                expandedStats.PlayerShots.Text = data.teams[1].players[4].stats.shots_taken.ToString();
+                // OrangePlayer1Saves
+                expandedStats.PlayerSaves.Text = data.teams[1].players[4].stats.saves.ToString();
+                // OrangePlayer1Steals
+                expandedStats.PlayerSteals.Text = data.teams[1].players[4].stats.steals.ToString();
+                // OrangePlayer1Stuns
+                expandedStats.PlayerStuns.Text = data.teams[1].players[4].stats.stuns.ToString();
+            }
+            catch (NullReferenceException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
+            catch (IndexOutOfRangeException)
+            {
+                // Reset Values
+                expandedStats.PlayerName.Text = "-- Unknown --";
+                expandedStats.PlayerPoints.Text = "-- Unknown --";
+                expandedStats.PlayerAssists.Text = "-- Unknown --";
+                expandedStats.PlayerShots.Text = "-- Unknown --";
+                expandedStats.PlayerSaves.Text = "-- Unknown --";
+                expandedStats.PlayerSteals.Text = "-- Unknown --";
+                expandedStats.PlayerStuns.Text = "-- Unknown --";
+            }
         }
     }
 }
