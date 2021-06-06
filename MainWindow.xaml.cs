@@ -221,7 +221,8 @@ namespace EchoAPIVisual3
 
         private void ExpandedPlayerStats(object sender, RoutedEventArgs e)
         {
-            Window window = new Window();
+            ExpandedStats expandedStats = new ExpandedStats();
+            expandedStats.Show();
 
         }
     }

@@ -87,11 +87,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="BlueP1ExpandedStats.xaml">
+    <Page Include="ExpandedStats.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EchoAPIVisual3.xaml">
+    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -100,12 +100,12 @@
       <SubType>Code</SubType>
     </Compile>
     <None Include="testing.json" />
-    <Compile Include="BlueP1ExpandedStats.xaml.cs">
-      <DependentUpon>BlueP1ExpandedStats.xaml</DependentUpon>
+    <Compile Include="ExpandedStats.xaml.cs">
+      <DependentUpon>ExpandedStats.xaml</DependentUpon>
     </Compile>
     <Compile Include="Class2.cs" />
-    <Compile Include="EchoAPIVisual3.xaml.cs">
-      <DependentUpon>EchoAPIVisual3.xaml</DependentUpon>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

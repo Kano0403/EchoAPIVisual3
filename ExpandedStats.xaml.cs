@@ -17,9 +17,9 @@ namespace EchoAPIVisual3
     /// <summary>
     /// Interaction logic for BlueP1ExpandedStats.xaml
     /// </summary>
-    public partial class BlueP1ExpandedStats : Window
+    public partial class ExpandedStats : Window
     {
-        public BlueP1ExpandedStats()
+        public ExpandedStats()
         {
             InitializeComponent();
         }
