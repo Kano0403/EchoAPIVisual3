@@ -8,27 +8,26 @@
         Title="BlueP1More_Page" Height="230" Width="673">
     <Grid Margin="0,0,2,0">
 
-        <TextBlock x:Name="TeamName"       HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0" Width="59" TextWrapping="Wrap" Text="Blue" FontSize="16" FontWeight="Bold"/>
-        <TextBlock x:Name="PlayerName"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,61,0,0" Width="75" TextWrapping="Wrap" Text="Name"/>
+        <TextBlock x:Name="TeamName"       HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0"  Width="59" Text=""         TextWrapping="Wrap" FontSize="16" FontWeight="Bold"/>
+        <TextBlock x:Name="PlayerName"     HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,61,0,0"  Width="75" Text="Name"     TextWrapping="Wrap"/>
 
-        <TextBlock x:Name="PointsHeader"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="115,25,0,0"            TextWrapping="Wrap" Text="Points" FontSize="16" FontWeight="Bold"/>
-        <TextBlock x:Name="PlayerPoints"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="115,61,0,0" Width="75" TextWrapping="Wrap" Text="Points"/>
+        <TextBlock x:Name="PointsHeader"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="115,25,0,0"            Text="Points"  TextWrapping="Wrap" FontSize="16" FontWeight="Bold"/>
+        <TextBlock x:Name="PlayerPoints"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="115,61,0,0" Width="75" Text="Points"  TextWrapping="Wrap"/>
 
-        <TextBlock x:Name="AssistsHeader"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="205,25,0,0"            TextWrapping="Wrap" Text="Assists" FontSize="16" FontWeight="Bold"/>
-        <TextBlock x:Name="PlayerAssists" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="205,61,0,0" Width="75" TextWrapping="Wrap" Text="Assist"/>
+        <TextBlock x:Name="AssistsHeader"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="205,25,0,0"            Text="Assists" TextWrapping="Wrap" FontSize="16" FontWeight="Bold"/>
+        <TextBlock x:Name="PlayerAssists"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="205,61,0,0" Width="75" Text="Assist"  TextWrapping="Wrap"/>
 
-        <TextBlock x:Name="ShotsHeader"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="295,25,0,0"            TextWrapping="Wrap" Text="Shots" FontSize="16" FontWeight="Bold"/>
-        <TextBlock x:Name="PlayerShots"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="295,61,0,0" Width="75" TextWrapping="Wrap" Text="Shots"/>
+        <TextBlock x:Name="ShotsHeader"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="295,25,0,0"            Text="Shots"   TextWrapping="Wrap" FontSize="16" FontWeight="Bold"/>
+        <TextBlock x:Name="PlayerShots"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="295,61,0,0" Width="75" Text="Shots"   TextWrapping="Wrap"/>
 
-        <TextBlock x:Name="SavesHeader"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="385,25,0,0"            TextWrapping="Wrap" Text="Saves" FontSize="16" FontWeight="Bold"/>
-        <TextBlock x:Name="PlayerSaves"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="385,61,0,0" Width="75" TextWrapping="Wrap" Text="Saves"/>
+        <TextBlock x:Name="SavesHeader"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="385,25,0,0"            Text="Saves"   TextWrapping="Wrap" FontSize="16" FontWeight="Bold"/>
+        <TextBlock x:Name="PlayerSaves"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="385,61,0,0" Width="75" Text="Saves"   TextWrapping="Wrap"/>
+        
+        <TextBlock x:Name="StealsHeader"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="475,25,0,0"            Text="Steals"  TextWrapping="Wrap" FontSize="16" FontWeight="Bold"/>
+        <TextBlock x:Name="PlayerSteals"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="475,61,0,0" Width="75" Text="Steals"  TextWrapping="Wrap"/>
 
-
-        <TextBlock x:Name="StealsHeader"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="475,25,0,0"            Text="Steals" TextWrapping="Wrap" FontSize="16" FontWeight="Bold"/>
-        <TextBlock x:Name="PlayerSteals"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="475,61,0,0" Width="75" Text="Steals" TextWrapping="Wrap"/>
-
-        <TextBlock x:Name="StunsHeader"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="565,25,0,0"            Text="Stuns" TextWrapping="Wrap" FontSize="16" FontWeight="Bold"/>
-        <TextBlock x:Name="PlayerStuns"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="565,61,0,0" Width="75" Text="Stuns" TextWrapping="Wrap"/>
+        <TextBlock x:Name="StunsHeader"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="565,25,0,0"            Text="Stuns"   TextWrapping="Wrap" FontSize="16" FontWeight="Bold"/>
+        <TextBlock x:Name="PlayerStuns"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="565,61,0,0" Width="75" Text="Stuns"   TextWrapping="Wrap"/>
 
 
 
