@@ -41,7 +41,7 @@
             <TextBlock x:Name="BlueP4Ping" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="135,73,0,0" Width="25" TextWrapping="Wrap" Text="999"/>
             <TextBlock x:Name="BlueP5Ping" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="135,94,0,0" Width="25" TextWrapping="Wrap" Text="999"/>
 
-            <Button x:Name="BlueP1More" Content="More" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,10,0,0" Width="25" Height="16" FontSize="9" Click="BlueP1More_Click"/>
+            <Button x:Name="BlueP1More" Content="More" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,10,0,0" Width="25" Height="16" FontSize="9" Click="BlueP1ExpandedPlayerStats"/>
             <Button x:Name="BlueP2More" Content="More" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,31,0,0" Width="25" Height="16" FontSize="9"/>
             <Button x:Name="BlueP3More" Content="More" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,52,0,0" Width="25" Height="16" FontSize="9"/>
             <Button x:Name="BlueP4More" Content="More" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="165,73,0,0" Width="25" Height="16" FontSize="9"/>

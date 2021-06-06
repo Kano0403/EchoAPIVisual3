@@ -219,9 +219,10 @@ namespace EchoAPIVisual3
             });
         }
 
-        private void BlueP1More(object sender, RoutedEventArgs e)
+        private void ExpandedPlayerStats(object sender, RoutedEventArgs e)
         {
-            // ignore
+            Window window = new Window();
+
         }
     }
 }
