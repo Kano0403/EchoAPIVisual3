@@ -1,0 +1,45 @@
+﻿<Window x:Class="EchoAPIVisual3.BlueP1More_Page"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EchoAPIVisual3"
+        mc:Ignorable="d"
+        Title="BlueP1More_Page" Height="450" Width="800">
+    <Grid Margin="0,0,129,194">
+        
+        <TextBlock HorizontalAlignment="Left" Margin="24,50,0,0" TextWrapping="Wrap" Text="Blue" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="59"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,86,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="75"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="114,50,0,0" TextWrapping="Wrap" Text="Points" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="112,86,0,0" TextWrapping="Wrap" Text="Points" VerticalAlignment="Top" Width="75"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="204,50,0,0" TextWrapping="Wrap" Text="Assists" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="204,86,0,0" TextWrapping="Wrap" Text="Assist" VerticalAlignment="Top" Width="75"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="296,50,0,0" TextWrapping="Wrap" Text="Shots" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="294,86,0,0" TextWrapping="Wrap" Text="Shots" VerticalAlignment="Top" Width="75"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="386,50,0,0" TextWrapping="Wrap" Text="Saves" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="384,86,0,0" TextWrapping="Wrap" Text="Saves" VerticalAlignment="Top" Width="75"/>
+        
+        
+        <TextBlock HorizontalAlignment="Left" Margin="476,50,0,0" TextWrapping="Wrap" Text="Steals" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="474,86,0,0" TextWrapping="Wrap" Text="Steals" VerticalAlignment="Top" Width="75"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="564,50,0,0" TextWrapping="Wrap" Text="Stuns" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="564,86,0,0" TextWrapping="Wrap" Text="Stuns" VerticalAlignment="Top" Width="75"/>
+
+        
+        
+        <Rectangle Fill="Black" Height="5" Margin="24,76,0,0" Stroke="Black" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="615"/>
+
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="149" Margin="104,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="5"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="149" Margin="194,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="5"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="149" Margin="284,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="5"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="149" Margin="554,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="5"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="149" Margin="464,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="5"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="149" Margin="374,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="5"/>
+
+    </Grid>
+</Window>

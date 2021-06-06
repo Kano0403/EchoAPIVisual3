@@ -218,5 +218,10 @@ namespace EchoAPIVisual3
                 }
             });
         }
+
+        private void BlueP1More(object sender, RoutedEventArgs e)
+        {
+            // ignore
+        }
     }
 }
